@@ -1,0 +1,18 @@
+.contactsListItem {
+  font-size: 16px;
+  margin-top: 7px;
+}
+.btnDelete {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+  color: darkslategray;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.btnDelete:hover,
+.btnDelete:focus {
+  color: #8a4242;
+}
