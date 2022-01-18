@@ -1,27 +1,38 @@
+import { Switch } from "react-router-dom";
+import { useGetCurrentUserQuery } from "../src/redux/contacts/api";
 
-
-import Section from './components/Section';
-import ContactForm from "./components/ContactForm";
-import ContactListWrapper from "./components/ContactListWrapper";
-import Filter from "./components/Filter"
+import AuthView from "../src/views/AuthView";
+import ContactsView from "../src/views/ContactsView";
+import PrivateRoute from "../src/routes/PrivateRoute";
+import PublicRoute from "../src/routes/PublicRoute";
+import UserMenu from "./components/UserMenu";
 
 const App = () => {
-
+  const { isFetching } = useGetCurrentUserQuery();
   return (
     <>
-      <Section title="Phonebook">
-        <ContactForm
-        />
-      </Section>
-      <Section title='Contacts'>
-        <Filter
-        />
-        <ContactListWrapper
-        />
+      <UserMenu />
+      {isFetching ? (
+        ""
+      ) : (
+        <>
+          <Switch>
+            <PrivateRoute path="/contacts">
+              <ContactsView />
+            </PrivateRoute>
 
-      </Section>
+            <PublicRoute path="/login" restricted={true}>
+              <AuthView />
+              <h2>Login view</h2>
+            </PublicRoute>
+            <PublicRoute path="/registration" restricted={true}>
+              <AuthView />
+            </PublicRoute>
+          </Switch>
+        </>
+      )}
     </>
   );
-}
+};
 
 export default App;

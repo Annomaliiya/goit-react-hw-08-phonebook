@@ -3,7 +3,8 @@ import ContactList from "../ContactList";
 import LoaderTailSpin from "../Loader";
 
 const ContactsListWrapper = () => {
-  const { data: contacts, isFetching } = useFetchContactsQuery();
+  var { data: contacts, isFetching } = useFetchContactsQuery();
+  contacts = contacts instanceof Array ? contacts : [];
 
   return (
     <div>

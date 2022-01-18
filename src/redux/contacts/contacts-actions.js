@@ -1,4 +1,4 @@
 import { createAction } from '@reduxjs/toolkit';
 
 
-export const filterContacts = createAction('phoneBook/filter');
+export const filterContacts = createAction('contacts/filter');

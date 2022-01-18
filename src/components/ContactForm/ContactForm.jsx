@@ -10,7 +10,6 @@ function ContactForm() {
   const [number, setNumber] = useState("");
   const { data: contacts } = useFetchContactsQuery();
   const [addContact, { isLoading, error }] = useAddContactMutation();
-
   const handleChange = ({ target }) => {
     const { name, value } = target;
     name === "name" ? setName(value) : setNumber(value);

@@ -8,7 +8,6 @@ function Filter() {
   const filterValue = useSelector(getFilter);
   const dispatch = useDispatch();
   const changeFilter = (e) => dispatch(actions.filterContacts(e.target.value));
-
   return (
     <label className={s.label}>
       Filter{" "}

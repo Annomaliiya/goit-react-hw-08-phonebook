@@ -1,0 +1,36 @@
+.user {
+  display: block;
+  color: white;
+  font-size: 25px;
+  list-style: none;
+  text-align: right;
+}
+.userMenu {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.logout {
+  display: block;
+}
+
+.logoutBtn {
+  margin-top: 20px;
+  width: 150px;
+  height: 40px;
+  color: white;
+  background-color: rgb(143, 3, 101);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.logoutBtn:hover,
+.logoutBtn:focus {
+  background-color: rgb(104, 101, 101);
+  color: white;
+}
