@@ -5,10 +5,7 @@ import {
 import { useSelector } from "react-redux";
 
 import Navigation from "../Navigation";
-import {
-  getIsLoggedIn,
-  selectCurrentUser,
-} from "../../redux/contacts/auth/selectors";
+import { getIsLoggedIn, selectCurrentUser } from "../../redux/auth/selectors";
 
 import s from "./UserMenu.module.css";
 

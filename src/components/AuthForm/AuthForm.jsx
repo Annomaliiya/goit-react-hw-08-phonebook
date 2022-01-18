@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { setCredentials } from "../../redux/contacts/auth/sliceCreator";
+import { setCredentials } from "../../redux/auth/sliceCreator";
 
 import s from "./AuthForm.module.css";
 

@@ -23,7 +23,6 @@ const App = () => {
 
             <PublicRoute path="/login" restricted={true}>
               <AuthView />
-              <h2>Login view</h2>
             </PublicRoute>
             <PublicRoute path="/registration" restricted={true}>
               <AuthView />

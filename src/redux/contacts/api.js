@@ -1,5 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { setCredentials, setUser, clearCredentials } from "./auth/sliceCreator";
+import {
+  setCredentials,
+  setUser,
+  clearCredentials,
+} from "../auth/sliceCreator";
 
 const URL = "https://connections-api.herokuapp.com";
 
